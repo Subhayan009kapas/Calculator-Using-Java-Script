@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(255, 88, 202), rgb(121, 0, 255));
+}
+.mode{
+  height: 35px;
+  width: 70px;
+  border: 1px solid rgb(121, 0, 255);
+  border-radius: 30px;
+  position: relative;
+  bottom: 20px;
+  left: 220px;
+  cursor: pointer;
+ 
+}
+.round{
+  height: 33px;
+  width: 33px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background:linear-gradient(to right, rgb(255, 88, 202), rgb(121, 0, 255));
+  background-size: contain;
+}
+button {
+  height: 66px;
+  width: 66px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: lightgray;
+  color: #1b1212;
+  border: 1px solid rgb(57, 37, 37);
+  border-radius: 5px;
+  box-shadow: rgb(74, 101, 130) 0px 20px 30px -10px;
+}
+button :before{
+  
+}
+
+
+
+
+
+button:active {
+  transform: scale(0.98);
+  color: crimson;
+}
+button i {
+  font-size: 25px;
+}
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.con {
+  position: relative;
+  top: 80px;
+}
+.main {
+  height: 580px;
+  width: 300px;
+  border: 2px solid lightgray;
+  position: relative;
+  top: 50px;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 1.75rem;
+  box-shadow: 10px 10px 10px;
+  background-color: ;
+}
+input {
+  height: 80px;
+  width: 300px;
+  font-size: 25px;
+  border: 2px solid black;
+  background-color: lightgray;
+  font-weight: bold;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  right: 3px;
+  
+}
+
+@media (max-width: 768px) {
+  .main {
+    height: 580px;
+    width: 300px;
+    border: 2px solid lightgray;
+    position: relative;
+    top: 50px;
+    padding: 27px;
+    background-color: #fff;
+    border-radius: 1.75rem;
+    box-shadow: 10px 10px 10px;
+   
+  }
+  .con {
+    position: relative;
+    top: 0px;
+    right: 5px;
+  }
+}
+.mode{
+  position: relative;
+  bottom: 40px;
+}

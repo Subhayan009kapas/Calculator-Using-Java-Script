@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <audio id="click-sound" src="click-button-140881.mp3"></audio>
+    <audio id="result-sound" src="mixkit-sci-fi-click-900.wav"></audio>
+    <div class="con">
+      <div class="main">
+        <div class="nav">
+          <div class="logo">
+            <b style="font-family: cursive; font-size: 22px">Sk_Calculator</b>
+          </div>
+
+          <div class="mode">
+            <div class="round"></div>
+          </div>
+        </div>
+
+        <input type="text" readonly />
+        <br />
+        <br />
+
+        <div class="btn1">
+          <button
+            onclick="clearval()"
+            style="background-color: rgb(207, 35, 16); color: #fff"
+          >
+            C
+          </button>
+          <button
+            onclick="backspace()"
+            style="background-color: rgb(207, 35, 16); color: #fff"
+          >
+            <i class="fa-solid fa-delete-left" style="font-size: 30px"></i>
+          </button>
+          <button
+            onclick="numberClick('*(1/100)')"
+            style="background-color: rgb(168, 26, 170); color: #fff"
+          >
+            <i class="fa-solid fa-percent"></i>
+          </button>
+          <button
+            onclick="operatorClick('/')"
+            style="background-color: rgb(168, 26, 170); color: #fff"
+          >
+            <i class="fa-solid fa-divide"></i>
+          </button>
+
+         
+        </div>
+        <br />
+        <div class="btn1">
+          <button onclick="numberClick('7')">7</button>
+          <button onclick="numberClick('8')">8</button>
+          <button onclick="numberClick('9')">9</button>
+          <button
+            onclick="operatorClick('*')"
+            style="background-color: rgb(168, 26, 170); color: #fff"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <br />
+        <div class="btn1">
+          <button onclick="numberClick('4')">4</button>
+          <button onclick="numberClick('5')">5</button>
+          <button onclick="numberClick('6')">6</button>
+          <button
+            onclick="operatorClick('-')"
+            style="background-color: rgb(168, 26, 170); color: #fff"
+          >
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+        <br />
+        <div class="btn1">
+          <button onclick="numberClick('1')">1</button>
+          <button onclick="numberClick('2')">2</button>
+          <button onclick="numberClick('3')">3</button>
+          <button
+            onclick="operatorClick('+')"
+            style="background-color: rgb(168, 26, 170); color: #fff"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <br />
+        <div class="btn1">
+          <button onclick="numberClick('.')">.</button>
+          <button onclick="numberClick('0')">0</button>
+          <button
+          class="result"
+            style="
+              height: 66px;
+              width: 150px;
+              background-color: rgb(168, 26, 170);
+              color: #fff;
+            "
+            onclick="result()"
+          >
+            <i class="fa-solid fa-equals" style="font-size: 29px"></i>
+          </button>
+        </div>
+        <br />
+        <div class="btn1"></div>
+        <br />
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+
+    <!-- adding sound to button -->
+    <script>
+      document.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+          var sound = document.getElementById("click-sound");
+          sound.play();
+        });
+      });
+    </script>
+
+<script>
+  document.querySelector(".result").addEventListener("click" ,()=>{
+    var resultsound=document.getElementById("result-sound");
+    resultsound.play();
+  })
+</script>
+<!-- adding sound to button -->
+  </body>
+</html>
